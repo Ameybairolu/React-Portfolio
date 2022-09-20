@@ -3,12 +3,20 @@ import { ReactElement, useEffect, useState } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 
 import logo from "assets/img/logo.svg";
-import navIcon1 from "assets/img/nav-icon1.svg";
-import navIcon2 from "assets/img/nav-icon2.svg";
-import navIcon3 from "assets/img/nav-icon3.svg";
 
-const NavigationBar: React.FC = (): ReactElement<any, any> => {
-    const [activeLink, setActiveLink] = useState<string | null>("home");
+interface NavigationBarProps {
+    linkOptions: Array<{ key: string; value: string }>;
+    navIcons: string[];
+    onLinkClick: (section: string) => void;
+    activeLink: string | null;
+}
+
+const NavigationBar: React.FC<NavigationBarProps> = ({
+    linkOptions,
+    navIcons,
+    onLinkClick,
+    activeLink
+}): ReactElement<any, any> => {
     const [scrolled, setScrolled] = useState<boolean>(false);
 
     useEffect(() => {
@@ -24,11 +32,6 @@ const NavigationBar: React.FC = (): ReactElement<any, any> => {
 
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
-
-    const onUpdateActiveLink = (section: string): void => {
-        setActiveLink(section);
-    };
-
     return (
         <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
             <Container>
@@ -40,39 +43,26 @@ const NavigationBar: React.FC = (): ReactElement<any, any> => {
                 </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link
-                            href="#home"
-                            className={activeLink === "home" ? "active navbar-link" : "navbar-link"}
-                            onClick={() => onUpdateActiveLink("home")}
-                        >
-                            Home
-                        </Nav.Link>
-                        <Nav.Link
-                            href="#skills"
-                            className={activeLink === "skills" ? "active navbar-link" : "navbar-link"}
-                            onClick={() => onUpdateActiveLink("skills")}
-                        >
-                            Skills
-                        </Nav.Link>
-                        <Nav.Link
-                            href="#projects"
-                            className={activeLink === "projects" ? "active navbar-link" : "navbar-link"}
-                            onClick={() => onUpdateActiveLink("projects")}
-                        >
-                            Projects
-                        </Nav.Link>
+                        {linkOptions.map((eachLinkOption) => {
+                            return (
+                                <Nav.Link
+                                    key={eachLinkOption.key}
+                                    href={`#${eachLinkOption.key}`}
+                                    className={activeLink === eachLinkOption.key ? "active navbar-link" : "navbar-link"}
+                                    onClick={() => onLinkClick(eachLinkOption.key)}
+                                >
+                                    {eachLinkOption.value}
+                                </Nav.Link>
+                            );
+                        })}
                     </Nav>
                     <span className="navbar-text">
                         <div className="social-icon">
-                            <a href="#">
-                                <img src={navIcon1} alt="" />
-                            </a>
-                            <a href="#">
-                                <img src={navIcon2} alt="" />
-                            </a>
-                            <a href="#">
-                                <img src={navIcon3} alt="" />
-                            </a>
+                            {navIcons.map((eachNavIcon, index) => (
+                                <a key={index} href="#">
+                                    <img src={eachNavIcon} alt="" />
+                                </a>
+                            ))}
                         </div>
                         <button className="vvd" onClick={() => console.log("connect")}>
                             <span>Let&apos;s Connect</span>
