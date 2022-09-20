@@ -1,13 +1,14 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Banner from "features/banner/components/banner";
+
 import NavigationBarContainer from "features/navigationBar/containers";
+import BannerContainer from "features/banner/containers";
 
 const App: React.FC = () => {
     return (
         <div className="App">
             <NavigationBarContainer />
-            <Banner />
+            <BannerContainer />
         </div>
     );
 };
