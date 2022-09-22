@@ -3,7 +3,7 @@ import "./testimonials.css";
 import { ReactElement } from "react";
 
 const Testimonials = (): ReactElement<any, any> => {
-    return <div>Testimonials</div>;
+    return <section id="testimonials">Testimonials</section>;
 };
 
 export default Testimonials;

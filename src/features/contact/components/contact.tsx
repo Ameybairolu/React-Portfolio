@@ -3,7 +3,7 @@ import "./contact.css";
 import { ReactElement } from "react";
 
 const Contact = (): ReactElement<any, any> => {
-    return <div>Contact</div>;
+    return <section id="contact">Contact</section>;
 };
 
 export default Contact;

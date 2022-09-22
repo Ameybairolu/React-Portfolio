@@ -3,7 +3,7 @@ import "./services.css";
 import { ReactElement } from "react";
 
 const Services = (): ReactElement<any, any> => {
-    return <div>Services</div>;
+    return <section id="services">Services</section>;
 };
 
 export default Services;
