@@ -1,53 +1,39 @@
 import "./about.css";
 
 import { ReactElement } from "react";
-import ME from "assets/me-about.jpg";
-import { FaAward } from "react-icons/fa";
-import { FiUsers } from "react-icons/fi";
-import { VscFolderLibrary } from "react-icons/vsc";
+import { IconType } from "react-icons";
 
-const About = (): ReactElement<any, any> => {
+interface AboutProps {
+    myPicture: string;
+    cardDetailsObjects: Array<{ title: string; description: string; icon: IconType }>;
+    aboutDescription: string;
+}
+
+const About: React.FC<AboutProps> = ({ myPicture, cardDetailsObjects, aboutDescription }): ReactElement<any, any> => {
     return (
-        <section id="about">
-            <h5>Get To Know</h5>
-            <h2>About Me</h2>
-
-            <div className="container about__container">
-                <div className="about__me">
-                    <div className="about__me-image">
-                        <img src={ME} alt="About Image" />
-                    </div>
-                </div>
-                <div className="about__content">
-                    <div className="about__cards">
-                        <article className="about__card">
-                            <FaAward className="about__icon" />
-                            <h5>Experience</h5>
-                            <small>3+ Years Working</small>
-                        </article>
-                        <article className="about__card">
-                            <FiUsers className="about__icon" />
-                            <h5>Clients</h5>
-                            <small>200+ Worldwide</small>
-                        </article>
-                        <article className="about__card">
-                            <VscFolderLibrary className="about__icon" />
-                            <h5>Projects</h5>
-                            <small>80+ Completed</small>
-                        </article>
-                    </div>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo autem iste minima vero eius
-                        nam dignissimos ab harum natus eveniet rem mollitia ut asperiores at, doloremque, optio
-                        voluptate repellendus corporis.
-                    </p>
-
-                    <a href="#contact" className="btn btn-primary">
-                        Let&apos;s Talk
-                    </a>
+        <>
+            <div className="about__me">
+                <div className="about__me-image">
+                    <img src={myPicture} alt="About Image" />
                 </div>
             </div>
-        </section>
+            <div className="about__content">
+                <div className="about__cards">
+                    {cardDetailsObjects.map((eachCardDetailsObject) => (
+                        <article key={eachCardDetailsObject.title} className="about__card">
+                            <eachCardDetailsObject.icon className="about__icon" />
+                            <h5>{eachCardDetailsObject.title}</h5>
+                            <small>{eachCardDetailsObject.description}</small>
+                        </article>
+                    ))}
+                </div>
+                <p>{aboutDescription}</p>
+
+                <a href="#contact" className="btn btn-primary">
+                    Let&apos;s Talk
+                </a>
+            </div>
+        </>
     );
 };
 
