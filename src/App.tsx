@@ -2,7 +2,7 @@ import "./App.css";
 
 import HeaderContainer from "features/header/containers";
 import NavContainer from "features/nav/containers";
-import AboutContainer from "features/about/containers";
+import About from "features/about/containers";
 import ExperienceContainer from "features/experience/containers";
 import ServicesContainer from "features/services/containers";
 import PortfolioContainer from "features/portfolio/containers";
@@ -15,7 +15,7 @@ const App: React.FC = () => {
         <div className="App">
             <HeaderContainer />
             <NavContainer />
-            <AboutContainer />
+            <About />
             <ExperienceContainer />
             <ServicesContainer />
             <PortfolioContainer />
