@@ -6,7 +6,7 @@ import ExperienceDetails from "../components/experienceDetails";
 
 import SectionTitle from "commonComponents/sectionTitle";
 
-const ExperienceContainer = (): ReactElement<any, any> => {
+const Experience = (): ReactElement<any, any> => {
     const titleDetails = { minorTitle: "The Skills I Have", majorTitle: "My Experience" };
 
     const primaryExperienceDetails = {
@@ -52,4 +52,4 @@ const ExperienceContainer = (): ReactElement<any, any> => {
     );
 };
 
-export default ExperienceContainer;
+export default Experience;
