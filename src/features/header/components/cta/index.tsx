@@ -1,10 +1,15 @@
-import { ReactElement } from "react";
-import CV from "assets/cv.pdf";
+import "./cta.css";
 
-const CTA = (): ReactElement<any, any> => {
+import { ReactElement } from "react";
+
+interface CTAProps {
+    pdfDownload: any;
+}
+
+const CTA: React.FC<CTAProps> = ({ pdfDownload }): ReactElement<any, any> => {
     return (
         <div className="cta">
-            <a href={CV} download className="btn">
+            <a href={pdfDownload} download className="btn">
                 Download CV
             </a>
             <a href="#contact" className="btn btn-primary">

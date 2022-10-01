@@ -1,6 +1,6 @@
 import "./App.css";
 
-import HeaderContainer from "features/header/containers";
+import Header from "features/header/containers";
 import NavContainer from "features/nav/containers";
 import About from "features/about/containers";
 import Experience from "features/experience/containers";
@@ -13,7 +13,7 @@ import Footer from "features/footer/containers";
 const App: React.FC = () => {
     return (
         <div className="App">
-            <HeaderContainer />
+            <Header />
             <NavContainer />
             <About />
             <Experience />
