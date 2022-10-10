@@ -19,7 +19,7 @@ const Experience = (): ReactElement<any, any> => {
             { title: "CSS3", level: "Intermediate" },
             { title: "Bootstrap", level: "Intermediate" },
             { title: "MUI", level: "Experienced" },
-            { title: "Tailwind", level: "Beginner" }
+            { title: "Tailwind", level: "Intermediate" }
         ]
     };
 
