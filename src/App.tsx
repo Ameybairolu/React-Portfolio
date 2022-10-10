@@ -3,7 +3,7 @@ import NavContainer from "features/nav/containers";
 import About from "features/about/containers";
 import Experience from "features/experience/containers";
 // import Services from "features/services/containers";
-import PortfolioContainer from "features/portfolio/containers";
+import Portfolio from "features/portfolio/containers";
 import TestimonialsContainer from "features/testimonials/containers";
 import Contact from "features/contact/containers";
 import Footer from "features/footer/containers";
@@ -16,7 +16,7 @@ const App: React.FC = () => {
             <About />
             <Experience />
             {/* <Services /> */}
-            <PortfolioContainer />
+            <Portfolio />
             <TestimonialsContainer />
             <Contact />
             <Footer />
