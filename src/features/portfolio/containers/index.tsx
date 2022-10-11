@@ -15,7 +15,7 @@ const Portfolio: React.FC = (): ReactElement<any, any> => {
             image: IMG1,
             title: "Portfolio using ReactJS and TypeScript",
             github: "https://github.com/Ameybairolu/React-Portfolio",
-            demo: "https://dribbble.com/"
+            demo: "https://ameybairolu.github.io/React-Portfolio"
         },
         {
             id: 2,
