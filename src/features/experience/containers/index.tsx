@@ -1,53 +1,36 @@
 import "./experience.css";
 
 import { ReactElement } from "react";
+import SectionWithSlider from "../components/sectionWithSlider";
 
-import ExperienceDetails from "../components/experienceDetails";
-
-import SectionTitle from "commonComponents/sectionTitle";
+import AVTR1 from "assets/syookLogo.png";
+import AVTR2 from "assets/cnLogo.jpg";
+import AVTR3 from "assets/indeeconLogo.png";
 
 const Experience = (): ReactElement<any, any> => {
-    const titleDetails = { minorTitle: "The Skills I Have", majorTitle: "My Experience" };
-
-    const primaryExperienceDetails = {
-        title: "Frontend Web Development",
-        experienceDetails: [
-            { title: "ReactJS", level: "Experienced" },
-            { title: "React Router DOM", level: "Experienced" },
-            { title: "Redux", level: "Experienced" },
-            { title: "HTML5", level: "Experienced" },
-            { title: "CSS3", level: "Intermediate" },
-            { title: "Bootstrap", level: "Intermediate" },
-            { title: "MUI", level: "Experienced" },
-            { title: "Tailwind", level: "Intermediate" }
-        ]
-    };
-
-    const secondaryExperienceDetails = {
-        title: "Programming Languages & UI/UX Desiging",
-        experienceDetails: [
-            { title: "JavaScript", level: "Experienced" },
-            { title: "TypeScript", level: "Experienced" },
-            { title: "DSA in Java", level: "Experienced" },
-            { title: "Python", level: "Intermediate" },
-            { title: "C", level: "Intermediate" },
-            { title: "Figma", level: "Intermediate" }
-        ]
-    };
+    const data = [
+        {
+            avatar: AVTR1,
+            title: "Sparkyo Technology Private Limited | Associate Software Enginner",
+            text: "Worked as a front-end developer to implement new features to the company's product using ReactJS, Redux, and React Router DOM, primarily. Developed reusable components and documented the progress."
+        },
+        {
+            avatar: AVTR2,
+            title: "Coding Ninjas | Teaching Assistant",
+            text: "Assisted students of Java Data Structures and Algorithm course with doubts related to the curriculum & provided mentorship to the students."
+        },
+        {
+            avatar: AVTR3,
+            title: "Indeecon Equipments & Instrument Company | Embedded Systems Intern",
+            text: "Worked on an IoT Based Bridge Health Monitor to measure various aspects of a bridge that help determine its health."
+        }
+    ];
 
     return (
         <section id="experience">
-            <SectionTitle {...titleDetails} />
-            <div className="container experience__container">
-                <div className="experience__frontend">
-                    <h3>{primaryExperienceDetails.title}</h3>
-                    <ExperienceDetails experienceDetails={primaryExperienceDetails.experienceDetails} />
-                </div>
-                <div className="experience__backend">
-                    <h3>{secondaryExperienceDetails.title}</h3>
-                    <ExperienceDetails experienceDetails={secondaryExperienceDetails.experienceDetails} />
-                </div>
-            </div>
+            <h5>Roles I have held</h5>
+            <h2>Experience</h2>
+            <SectionWithSlider data={data} />
         </section>
     );
 };
