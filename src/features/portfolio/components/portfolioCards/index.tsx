@@ -1,4 +1,4 @@
-import "./portfolio.css";
+import "./portfolioCards.css";
 
 import { ReactElement } from "react";
 
