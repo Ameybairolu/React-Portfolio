@@ -11,7 +11,7 @@ import { FaAward } from "react-icons/fa";
 // import { FiUsers } from "react-icons/fi";
 import { VscFolderLibrary } from "react-icons/vsc";
 
-import ME from "assets/me-about.jpg";
+import ME from "assets/me-aboutAmey.jpg";
 
 const About = (): ReactElement<any, any> => {
     const titleDetails = { minorTitle: "Get To Know", majorTitle: "About Me" };

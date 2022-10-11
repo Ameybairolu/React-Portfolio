@@ -14,11 +14,11 @@ const Footer = (): ReactElement<any, any> => {
     const permalinksDetails = [
         { link: "#", linkText: "Home" },
         { link: "#about", linkText: "About" },
-        { link: "#experience", linkText: "Experience" },
-        { link: "#services", linkText: "Services" },
+        { link: "#expertise", linkText: "Expertise" },
         { link: "#portfolio", linkText: "Portfolio" },
-        { link: "#testimonials", linkText: "Testimonials" },
+        { link: "#experience", linkText: "Experience" },
         { link: "#contact", linkText: "Contact" }
+        // { link: "#services", linkText: "Services" }
     ];
 
     const socialsDetails = [

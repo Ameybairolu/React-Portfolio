@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import PortfolioCards from "../components/portfolioCards";
 
-import IMG1 from "assets/portfolio1.jpg";
+import IMG1 from "assets/portfolioImage.png";
 import IMG2 from "assets/dishPollImage.png";
 import IMG3 from "assets/chatAppImage.png";
 import IMG4 from "assets/contactListImage.png";
@@ -13,8 +13,8 @@ const Portfolio: React.FC = (): ReactElement<any, any> => {
         {
             id: 1,
             image: IMG1,
-            title: "Crypto Currency Dashboard & Financial Visualization",
-            github: "https://github.com/",
+            title: "Portfolio using ReactJS and TypeScript",
+            github: "https://github.com/Ameybairolu/React-Portfolio",
             demo: "https://dribbble.com/"
         },
         {

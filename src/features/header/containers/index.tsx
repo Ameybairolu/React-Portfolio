@@ -9,13 +9,13 @@ import { BsLinkedin } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
 import { FiDribbble } from "react-icons/fi";
 
-import CV from "assets/cv.pdf";
-import ME from "assets/me.png";
+import CV from "assets/AmeyResume.pdf";
+import ME from "assets/meAmey.png";
 
 const Header = (): ReactElement<any, any> => {
     const socialsDetailsObjects = [
-        { icon: BsLinkedin, link: "https://linkedin.com", openInNewTab: true },
-        { icon: FaGithub, link: "https://github.com", openInNewTab: true },
+        { icon: BsLinkedin, link: "https://www.linkedin.com/in/ameybairolu/", openInNewTab: true },
+        { icon: FaGithub, link: "https://github.com/Ameybairolu", openInNewTab: true },
         { icon: FiDribbble, link: "https://dribbble.com", openInNewTab: true }
     ];
 
