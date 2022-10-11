@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/React-Portfolio/static/css/main.7327f811.css",
+    "main.js": "/React-Portfolio/static/js/main.71194d1f.js",
+    "static/js/787.1ed0c42c.chunk.js": "/React-Portfolio/static/js/787.1ed0c42c.chunk.js",
+    "static/media/forkifyImage.png": "/React-Portfolio/static/media/forkifyImage.0c5e99d2d0225315d1cc.png",
+    "static/media/meAmey.png": "/React-Portfolio/static/media/meAmey.4ee9e78b119ff9b62906.png",
+    "static/media/portfolioImage.png": "/React-Portfolio/static/media/portfolioImage.5d30ced8215cfd66215d.png",
+    "static/media/dishPollImage.png": "/React-Portfolio/static/media/dishPollImage.a0d7b8592aff4a5d9908.png",
+    "static/media/me-aboutAmey.jpg": "/React-Portfolio/static/media/me-aboutAmey.12d6872e485d53463b4a.jpg",
+    "static/media/chatAppImage.png": "/React-Portfolio/static/media/chatAppImage.5ea5894dba0f455bcf6a.png",
+    "static/media/contactListImage.png": "/React-Portfolio/static/media/contactListImage.bbbdaa3cda2820b02420.png",
+    "static/media/adminImage.png": "/React-Portfolio/static/media/adminImage.feb96c83ec5267ff2416.png",
+    "static/media/syookLogo.png": "/React-Portfolio/static/media/syookLogo.f7cd0ead40ac0faf70cd.png",
+    "static/media/cnLogo.jpg": "/React-Portfolio/static/media/cnLogo.4224dcdc49187e42061b.jpg",
+    "static/media/AmeyResume.pdf": "/React-Portfolio/static/media/AmeyResume.631a4899631e358e9ad4.pdf",
+    "index.html": "/React-Portfolio/index.html",
+    "main.7327f811.css.map": "/React-Portfolio/static/css/main.7327f811.css.map",
+    "main.71194d1f.js.map": "/React-Portfolio/static/js/main.71194d1f.js.map",
+    "787.1ed0c42c.chunk.js.map": "/React-Portfolio/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7327f811.css",
+    "static/js/main.71194d1f.js"
+  ]
+}
